@@ -45,7 +45,6 @@ CREATE TABLE subcategory
 -- Add constraint to tables after create/import above data
 ALTER TABLE campaign
 ADD CONSTRAINT fk_category_campaign FOREIGN KEY(category_id) REFERENCES category (category_id),
-ADD CONSTRAINT fk_subcategory_campaign FOREIGN KEY(subcategory_id) REFERENCES subcategory (subcategory_id),
 ADD CONSTRAINT fk_contacts_campaign FOREIGN KEY(contact_id) REFERENCES contacts (contact_id);
-
+ADD CONSTRAINT fk_subcategory_campaign FOREIGN KEY(subcategory_id) REFERENCES subcategory (subcategory_id),
 
