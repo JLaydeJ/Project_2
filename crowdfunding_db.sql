@@ -1,9 +1,13 @@
+
+-- Create tables and Import CSV files
+
+-- Create category table
  CREATE TABLE category(
 	category_id VARCHAR(4) NOT NULL,
 	category_name VARCHAR(20),
 	PRIMARY KEY(category_id)
 );
- 
+-- Create contacts table
  CREATE TABLE contacts(
 	contact_id INT NOT NULL,
 	first_name VARCHAR(30),
@@ -12,13 +16,14 @@
 	PRIMARY KEY(contact_id)
 );
 
+-- Create subcategory table
 CREATE TABLE subcategory
 (
 	subcategory_id VARCHAR(8) NOT NULL,
 	subcategory_name VARCHAR(30),
 	PRIMARY KEY(subcategory_id)
 );
- 
+ -- Create campaign table
  CREATE TABLE campaign(
 	cf_id INT NOT NULL,
 	contact_id INT,
@@ -36,9 +41,10 @@ CREATE TABLE subcategory
 	subcategory_id VARCHAR(8) NOT NULL,		
 	PRIMARY KEY(cf_id)
 	);
+
+-- Add constraint to tables after create/import above data
 ALTER TABLE campaign
 ADD CONSTRAINT fk_category_campaign FOREIGN KEY(category_id) REFERENCES category (category_id),
-ADD CONSTRAINT fk_subcategory_campaign FOREIGN KEY(subcategory_id) REFERENCES subcategory (subcategory_id),
 ADD CONSTRAINT fk_contacts_campaign FOREIGN KEY(contact_id) REFERENCES contacts (contact_id);
-
+ADD CONSTRAINT fk_subcategory_campaign FOREIGN KEY(subcategory_id) REFERENCES subcategory (subcategory_id),
 
