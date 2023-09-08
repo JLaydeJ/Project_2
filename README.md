@@ -44,7 +44,7 @@ The instructions for this mini project are divided into the following subsection
 - The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
 - The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
 - The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
-- The following image shows this campaign DataFrame:
+- The following image shows this campaign DataFrame
 
 
 
@@ -73,7 +73,7 @@ The instructions for this mini project are divided into the following subsection
 - Split each "name" column value into a first and a last name, and place each in a new column.
 - Clean and then export the DataFrame as contacts.csv and save it to your GitHub repository.
 
-4. Check that your final DataFrame resembles the one in the following image:
+4. Check that your final DataFrame resembles the one in the following image
 
 
 
